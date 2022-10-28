@@ -1,0 +1,231 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kavra's Kingdom Personal Script", "Synapse")
+
+local Tab = Window:NewTab("Receptionist Section")
+local Section = Tab:NewSection("Receptionist Dialouges")
+
+-- RECEPTIONISTS SECTION
+Section:NewButton("Open Desk Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Open Desk!", "All")
+end)
+
+Section:NewButton("Greetings Dialogue", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Greetings Visitor! My name is HellHounds and welcome to Kavra's Kingdom!, Would you like to acquire a job today?", "All")
+end)
+
+Section:NewButton("Rank Checking Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Alright!, Please allow me to check your rank to see if you're suitable for the job, and kindly wait for a little bit.", "All")
+end)
+
+Section:NewButton("Rank Checking Dialogue (Reject Visitor)", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Unfortunately, It seems like you're a guest, and you are required to be a recruit to get a job, to acquire the role recruit, please join the group called Kavra's Kingdom and then come back.", "All")
+end)
+
+Section:NewButton("Rank Checking Dialogue (Accept Visitor)", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("It seems like you already have the role called recruit, and once again, welcome to Kavra's Kingdom!", "All")
+end)
+
+Section:NewButton("Sending to Security Room Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Now, I'll proceed to send you to the waiting room, Good luck!!", "All")
+end)
+
+-- SUPERVISOR SECTION
+local Tab = Window:NewTab("Supervisor Section")
+local Section = Tab:NewSection("Supervisor Dialouges")
+
+Section:NewButton("Greetings Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Greetings Visitors! My name is HellHounds and welcome to the Supervisor's Office, What can I do for you this day?", "All")
+end)
+
+Section:NewButton("Complimenting Receptionists Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("You did a really great job doing your duties as a receptionist!", "All")
+end)
+
+Section:NewButton("Volunteer to Tour Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Sure! I'd love to tour him/her around Kavra's Kingdom today!", "All")
+end)
+
+local Section = Tab:NewSection("Tourist Dialouges (First Floor)")
+
+Section:NewButton("Greetings & Disclaimers Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Greetings! My name is HellHounds and I will be your tour guide around Kavra's kingdom today!, Make sure to follow me and not get lost on today's tour around Kavra's Kingdom!", "All")
+end)
+
+Section:NewButton("Supervisor's Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Supervisor's Room, Where you can ask us questions about Kavra's Kingdom.", "All")
+end)
+
+Section:NewButton("Receptionists Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Receptionists Room, and this is where you will be working as a receptionist!", "All")
+end)
+
+Section:NewButton("AFK Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the AFK Room, where you can just sit down and then get tons of EXP just by doing nothing.", "All")
+end)
+
+Section:NewButton("Private AFK Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Private AFK Room, basically the private version of the regular AFK room.", "All")
+end)
+
+Section:NewButton("Library Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Library, Where you can read books with information related to your job.", "All")
+end)
+
+Section:NewButton("Princess Alaska's Bedroom Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is Princess Alaska's Bedroom, and the baby sleeping in the crib that you see is Princess Alaska.", "All")
+end)
+
+Section:NewButton("Restroom Hall Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Restroom Hall, Where you can use toilets or urinals to refill your toilet statistics.", "All")
+end)
+
+Section:NewButton("Spawning Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Spawning Room, Where you will start spawning once you acquire a job at Kavra's Kingdom.", "All")
+end)
+
+Section:NewButton("High Ranking Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the High Ranking Room, Only exclusive for HR's and Above only.", "All")
+end)
+
+Section:NewButton("Ground Floor Finishing Dialogue", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("That's all for the Ground Floor!", "All")
+end)
+
+-- SUPERVISOR/TOURIST DIALOUGES (BM)
+local Section = Tab:NewSection("Tourist Dialouges (Basement)")
+
+Section:NewButton("Going to the Basement Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Now, Let's proceed going to the basement floor.", "All")
+end)
+
+Section:NewButton("Everyone's Restroom Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is Everybody's Restroom, The one and only restroom of the basement.", "All")
+end)
+
+Section:NewButton("Bunker Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Bunker, This is where you should go incase there's a Fire Emergency or a Fire Drill.", "All")
+end)
+
+Section:NewButton("Special Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Special Room, You can go inside here after you bought the gamepass called; Special Room for Special People", "All")
+end)
+
+Section:NewButton("Announcements Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Announcements Room, Where Announcements, Reward Sessions, and Formations are held.", "All")
+end)
+
+Section:NewButton("Memory Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Memory Room, Where the past memories of Kavra's Kingdom are kept.", "All")
+end)
+
+Section:NewButton("Theater Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Theater, But don't go to the theater yet due to the fact that it will teleport you to a different game.", "All")
+end)
+
+Section:NewButton("Basement Finishing Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("That's all for the Basement.", "All")
+end)
+
+-- SUPERVISOR/TOURIST DIALOUGES (2F)
+local Section = Tab:NewSection("Tourist Dialouges (Second Floor)")
+
+Section:NewButton("Going to the Second Floor dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Now, Let's go to the second floor, Shall we?", "All")
+end)
+
+Section:NewButton("Cafe Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Cafe, Where you can order drinks from baristas.", "All")
+end)
+
+Section:NewButton("Restaurant Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Restaurant, Where you can order Foods from chefs, or get ranked if there's no rankers available at the moment.", "All")
+end)
+
+Section:NewButton("Security Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Security room, Where you were interviewed earlier before getting sent to the training room.", "All")
+end)
+
+Section:NewButton("Training Area Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Training Area, This is where you were trained.", "All")
+end)
+
+Section:NewButton("Second Floor Finishing Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("That's all for the second floor I think.", "All")
+end)
+
+-- SUPERVISOR/TOURIST DIALOUGES (3F)
+local Section = Tab:NewSection("Supervisor/Tourist Dialouges (Third Floor)")
+
+Section:NewButton("Going to the Third Floor Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("We shall now proceed to the Third Floor.", "All")
+end)
+
+Section:NewButton("Rankers Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Rankers Room, Where you can get ranked up after you achieve 100% EXP from your job", "All")
+end)
+
+Section:NewButton("Advisory Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Advisory Room, Where you can ask for advices from advisers.", "All")
+end)
+
+Section:NewButton("Meeting Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the meeting room, Where important meetings among HR's are held. ", "All")
+end)
+
+Section:NewButton("Department Hall Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Department Hall, Where departments and community rooms are located.", "All")
+end)
+
+Section:NewButton("Quiet Room Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Quiet Room, Where you can chill when you're too stressed from work.", "All")
+end)
+
+Section:NewButton("Third Floor Finishing Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("That's all for the Third Floor.", "All")
+end)
+
+-- SUPERVISOR/TOURIST DIALOUGES (4F)
+local Section = Tab:NewSection("Tourist Dialouges (Fourth Floor)")
+
+Section:NewButton("Going to the Fourth Floor Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Now, Let's proceed to the Fourth Floor, Shall we?", "All")
+end)
+
+Section:NewButton("Queens' Quarters Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("This is the Queen's Private Quarters, The only room on the 4th floor", "All")
+end)
+
+Section:NewButton("Fourth Floor Finishing Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("That's all for the Fourth Floor I guess.", "All")
+end)
+
+-- SUPERVISOR/TOURIST DIALOUGES (5F)
+local Section = Tab:NewSection("Tourist Dialouges (Fifth Floor)")
+
+Section:NewButton("Going to the Fifth Floor Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Now, Let's proceed to the Final Floor!.", "All")
+end)
+
+Section:NewButton("Jail Explanation", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Lastly, This is the Jail, You will get sent here if you broke a rule related to your job.", "All")
+end)
+
+Section:NewButton("Tour Ending Dialogue", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("That wraps it up for todays tour, Thank you for listening to me and I hope you enjoyed todays tour!, If you have any questions, just go to the supervisor's office and ask!.", "All")
+end)
+
+-- SECURITY SECTION
+local Tab = Window:NewTab("Security Section")
+local Section = Tab:NewSection("Security Dialouges")
+
+Section:NewButton("Greetings Dialogue", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Greetings Recruit! My name is HellHounds, and welcome to the Security's Office, Where would you like to go?", "All")
+end)
+
+Section:NewButton("Confused Recruit Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("So you're going to the waiting room, Correct?", "All")
+end)
+
+Section:NewButton("Sending to Waiting Room Dialouge", "...", function()
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Alrighty then! Good luck with your training!!", "All")
+end)
