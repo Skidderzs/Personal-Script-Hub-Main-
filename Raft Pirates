@@ -1,0 +1,119 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Raft Pirates", "BloodTheme")
+--Main Section
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Fun Stuff")
+
+Section:NewButton("God Mode", "God Mode", function()
+    while wait () do
+game:GetService("ReplicatedStorage").Remotes.Inventory.ChangeValue:InvokeServer(game:GetService("Players").LocalPlayer.Character.Hunger, math.huge)
+game:GetService("ReplicatedStorage").Remotes.Inventory.ChangeValue:InvokeServer(game:GetService("Players").LocalPlayer.Character.Thirst, math.huge)
+game:GetService("ReplicatedStorage").Remotes.Game.Damage:InvokeServer(game:GetService("Players").LocalPlayer.Character.Humanoid, -math.huge)
+end
+end)
+
+Section:NewButton("Max Levels", "Gives you max levels for crafting", function()
+    for i,v in pairs(game:GetService("Players").LocalPlayer.Recipes:GetChildren()) do
+if v.Value == false then
+   v.Value = true
+end
+end
+end)
+
+Section:NewButton("Activate All Sounds", "Activates all Sounds", function()
+    for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+   if v:IsA("Sound") then
+local userdata_1 = v;
+local Target = game:GetService("ReplicatedStorage").Remotes.Game.Sound;
+Target:FireServer(userdata_1);
+end
+end
+end)
+
+Section:NewButton("Diamond Trap (Don't Pick This Up)", "Don't Pick this up", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Diamond"), math.huge)
+end)
+
+local Section = Tab:NewSection("Spawning Section")
+
+Section:NewButton("Spawn All Items", "Spawns All Item", function()
+    for i,v in pairs(game:GetService("ReplicatedStorage").Items:GetChildren()) do
+local userdata_1 = v;
+local number_1 = 1;
+local Target = game:GetService("ReplicatedStorage").Remotes.Interact.Drop;
+Target:FireServer(userdata_1, number_1);
+end
+end)
+
+Section:NewButton("Spawn Best Weapons", "Gives you the best weapons in the game", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Hellfire Pistol"), 1)
+game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Rapture Musket"), 1)
+game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Dreamy Blunderbuss"), 1)
+game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Godly Dagger"), 1)
+end)
+
+Section:NewButton("Spawn Best Tools", "Gives you the best tools in the game", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Polonium Axe"), 1)
+game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Polonium Pick"), 1)
+game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Gold Repair Tool"), 1)
+end)
+
+Section:NewButton("Spawn Bandage", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Bandage"), 10)
+end)
+
+Section:NewButton("Spawn Pirate Lunch", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Pirate Lunch"), 10)
+end)
+
+Section:NewButton("Spawn Berry Salad", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Berry Salad"), 10)
+end)
+
+Section:NewButton("[100x] Ghostly Blocks", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Block"), 100)
+end)
+
+Section:NewButton("[200x] Ghostly Blocks", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Block"), 200)
+end)
+
+Section:NewButton("[300x] Ghostly Blocks", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Block"), 300)
+end)
+
+Section:NewButton("[1x] Ghostly Sails", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Sail"), 1)
+end)
+
+Section:NewButton("[5x] Ghostly Sails", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Sail"), 5)
+end)
+
+Section:NewButton("[10x] Ghostly Sails", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Sail"), 10)
+end)
+
+Section:NewButton("[1x] Ghostly Cannons", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Cannon"), 1)
+end)
+
+Section:NewButton("[5x] Ghostly Cannons", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Cannon"), 5)
+end)
+
+Section:NewButton("[10x] Ghostly Cannons", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Ghostly Cannon"), 10)
+end)
+
+Section:NewButton("[1x] Explosive Cannons", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Explosive Cannon"), 1)
+end)
+
+Section:NewButton("[5x] Explosive Cannons", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Explosive Cannon"), 5)
+end)
+
+Section:NewButton("[10x] Explosive Cannons", "...", function()
+    game:GetService("ReplicatedStorage").Remotes.Interact.Drop:FireServer(game:GetService("ReplicatedStorage").Items:FindFirstChild("Explosive Cannon"), 10)
+end)
