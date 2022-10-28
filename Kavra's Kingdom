@@ -1,4 +1,3 @@
-
 local Tab = Window:NewTab("Receptionist Section")
 local Section = Tab:NewSection("Receptionist Dialouges")
 
