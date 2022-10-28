@@ -1,0 +1,176 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Thief Life Simulator Utility Menu", "Synapse")
+
+--Main
+local Main = Window:NewTab("Main Section")
+local MainSection = Main:NewSection("Best Features (OP)")
+
+MainSection:NewToggle("Cash Generator ($95k + Any pet)", "Requires $95k", function(state)
+    if state then
+        getgenv().InfCash = true
+while getgenv().InfCash == true do
+    task.wait()
+game:GetService("ReplicatedStorage").Events.GunShop.RequestBuy:FireServer("RareM4A1")
+game:GetService("ReplicatedStorage").Events.Shop.RequestSellItem:FireServer(1)
+end
+    else
+        getgenv().InfCash = false
+while getgenv().InfCash == true do
+    task.wait()
+game:GetService("ReplicatedStorage").Events.GunShop.RequestBuy:FireServer("RareM4A1")
+game:GetService("ReplicatedStorage").Events.Shop.RequestSellItem:FireServer(1)
+end
+end
+end)
+
+MainSection:NewButton("Purchase Best Items ($610k)", "...", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("RareM4A1")
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("HeavyBodyArmour3")
+end)
+
+--Teleports
+local Main = Window:NewTab("Teleports")
+local MainSection = Main:NewSection("Area Teleport List")
+
+MainSection:NewButton("Teleport to Spawn", "Main Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-1336.2213134765625, 13.488713264465332, -19.884178161621094) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to VIP (Needs Noclip)", "VIP Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-1205.3511962890625, -8.87243366241455, -159.88894653320312) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Prison", "Prison Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-2103.540771484375, 13.674345970153809, -37.91753387451172) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Warehouse", "Warehouse Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-2260.421875, 13.674481391906738, 885.7119140625) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Suburbs", "Suburbs Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-1334.71875, 13.356301307678223, 793.1726684570312) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Grocery Store", "Grocery Store Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-2457.44921875, 13.606293678283691, -1016.427490234375) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Boat Club", "Boat Club Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-873.5481567382812, 13.674345970153809, 842.890625) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Desert Base", "Desert Base Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-548.4236450195312, 3.5427136421203613, 4151.625) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Jewelry Store", "Jewelry Store Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-2163.638671875, 13.690018653869629, 1419.328125) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+MainSection:NewButton("Teleport to Luxury Club", "Luxury Club Area", function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart local location = CFrame.new(-2728.3515625, 13.674345970153809, 1616.329345703125) local humanoid = game.Players.LocalPlayer.Character.Humanoid wait() pl.CFrame = location
+end)
+
+--Gun Shop
+local Main = Window:NewTab("Gun Shop")
+local MainSection = Main:NewSection("Common Weapons List") 
+
+MainSection:NewButton("Purchase Glock17 ($500)", "Requires $500", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("Glock17")
+end)
+
+MainSection:NewButton("Purchase M1911 ($1,500)", "Requires $1,500", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("1911")
+end)
+
+MainSection:NewButton("Purchase Tec-9 ($8,000)", "Requires $8,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("TEC9")
+end)
+
+MainSection:NewButton("Purchase Shotgun ($20,000)", "Requires $20,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("Shotgun")
+end)
+
+MainSection:NewButton("Purchase Uzi ($35,000)", "Requires $35,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("UZI")
+end)
+
+MainSection:NewButton("Purchase Ak-47 ($70,000)", "Requires $70,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("AK47")
+end)
+
+MainSection:NewButton("Purchase M4a1 ($95,000)", "Requires $95,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("M4A1")
+end)
+
+local MainSection = Main:NewSection("Golden Weapons List")
+
+MainSection:NewButton("Purchase Golden M1911 ($100,000)", "Requires $100,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("Golden1911")
+end)
+
+MainSection:NewButton("Purchase Golden Shotgun ($150,000)", "Requires $150,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("Golden1911")
+end)
+
+local MainSection = Main:NewSection("Rare Weapons List")
+
+MainSection:NewButton("Purchase Rare Uzi ($35,000)", "Requires $35,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("RareUZI")
+end)
+
+MainSection:NewButton("Purchase Rare M4a1 ($95,000)", "Requires $95,000", function()
+    game.ReplicatedStorage.Events.GunShop.RequestBuy:FireServer("RareM4A1")
+end)
+
+--Armor Shop
+local Main = Window:NewTab("Armor Shop")
+local MainSection = Main:NewSection("Light Vests List")
+
+MainSection:NewButton("Purchase Light Protective Vest LVL 1 ($500)", "Requires $500", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("LightBulletProofVest1")
+end)
+
+MainSection:NewButton("Purchase Light Protective Vest LVL 2 ($1,250)", "Requires $1,250", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("LightBulletProofVest2")
+end)
+
+MainSection:NewButton("Purchase Light Protective Vest LVL 3 ($6,250)", "Requires $6,250", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("LightBulletProofVest3")
+end)
+
+local MainSection = Main:NewSection("Heavy Vests List")
+
+MainSection:NewButton("Purchase Heavy Protective Vest LVL 1 ($13,500)", "Requires $13,500", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("HeavyBulletProofVest1")
+end)
+
+MainSection:NewButton("Purchase Heavy Protective Vest LVL 2 ($22,500)", "Requires $22,500", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("HeavyBulletProofVest2")
+end)
+
+MainSection:NewButton("Purchase Heavy Protective Vest LVL 3 ($38,500)", "Requires $38,500", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("HeavyBulletProofVest3")
+end)
+
+local MainSection = Main:NewSection("Heavy Body Armors List")
+
+MainSection:NewButton("Purchase Heavy Body Armor LVL 1 ($125,000)", "Requires $125,000", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("HeavyBodyArmour1")
+end)
+
+MainSection:NewButton("Purchase Heavy Body Armor LVL 2 ($275,000)", "Requires $275,000", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("HeavyBodyArmour2")
+end)
+
+MainSection:NewButton("Purchase Heavy Body Armor LVL 3 ($515,000)", "Requires $515,000", function()
+    game.ReplicatedStorage.Events.ArmourShop.RequestBuy:FireServer("HeavyBodyArmour3")
+end)
+
+--Credits
+local Main = Window:NewTab("Credits")
+local MainSection = Main:NewSection("Script Creator: Skidderzs")
+local MainSection = Main:NewSection("Script Creator's Discord: Matt. #2092")
+local MainSection = Main:NewSection("RemoteSpy Used: SimpleSpy")
+local MainSection = Main:NewSection("UI Library Used: Kavo UI") 
