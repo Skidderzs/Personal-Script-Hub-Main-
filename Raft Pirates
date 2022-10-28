@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Raft Pirates", "BloodTheme")
+local Window = Library.CreateLib("Raft Pirates", "Synapse")
 --Main Section
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Fun Stuff")
